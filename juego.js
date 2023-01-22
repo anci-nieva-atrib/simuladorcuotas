@@ -16,8 +16,7 @@ if(pista1 == "javascript"){
     while(pista1 == false)
         alert("La palabra ingresada " + pista1 + " es incorrecta. Intentá nuevamente.");
         pista1 = prompt("Ingresá un lenguaje de programación");
-
-}alert("La palabra ingresada " + pista1 + " es CORRECTA y sumaste " + puntos + " puntos!");
+}
 
 
 
@@ -32,8 +31,7 @@ if(pista2 == "messi"){
     while(pista2 == false);
     alert("La palabra ingresada " + pista2 + " es incorrecta. Intentá nuevamente.");
     pista2 = prompt("Ingresá un lenguaje de programación");
-
-}alert("La palabra ingresada " + pista2 + " es CORRECTA y sumaste " + puntos + " puntos!");
+}
 
 
 let pista3 = prompt("Ingresá el de copas del mundo que ganó Argentina");
@@ -47,8 +45,7 @@ if(pista3 == "3"){
     while(pista3 == false);
     alert("La palabra ingresada " + pista3 + " es incorrecta. Intentá nuevamente.");
     pista3 = prompt("Ingresá un lenguaje de programación");
-
-}alert("La palabra ingresada " + pista3 + " es CORRECTA y sumaste " + puntos + " puntos!");
+}
 
 
 
