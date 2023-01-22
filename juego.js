@@ -13,7 +13,7 @@ if(pista1 == "javascript"){
 }else if (pista1 =="JavaScript"){
     alert("La palabra ingresada " + pista1 + " es CORRECTA y sumaste " + puntos + " puntos!");
 }else{
-    while(pista1 == false){
+    while(pista1 == true){
         alert("La palabra ingresada " + pista1 + " es incorrecta. Intentá nuevamente.");
         pista1 = prompt("Ingresá un lenguaje de programación");
     }
@@ -29,7 +29,7 @@ if(pista2 == "messi"){
 }else if (pista2 =="MESSI"){
     alert("La palabra ingresada " + pista2 + " es CORRECTA y sumaste " + puntos + " puntos!");
 }else{
-    while(pista2 == false){
+    while(pista2 == true){
     alert("La palabra ingresada " + pista2 + " es incorrecta. Intentá nuevamente.");
     pista2 = prompt("Ingresá un lenguaje de programación");
     }
@@ -44,7 +44,7 @@ if(pista3 == "3"){
 }else if (pista3 =="TRES"){
     alert("La palabra ingresada " + pista3 + " es CORRECTA y sumaste " + puntos + " puntos!");
 }else{
-    while(pista3 == false){
+    while(pista3 == true){
     alert("La palabra ingresada " + pista3 + " es incorrecta. Intentá nuevamente.");
     pista3 = prompt("Ingresá un lenguaje de programación");
     }
