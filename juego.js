@@ -13,11 +13,15 @@ if(pista1 == "javascript"){
 }else if (pista1 =="JavaScript"){
     alert("La palabra ingresada " + pista1 + " es CORRECTA y sumaste " + puntos + " puntos!");
 }else{
-    while(pista1 != true){
+    do{
         alert("La palabra ingresada " + pista1 + " es incorrecta. Intentá nuevamente.");
         pista1 = prompt("Ingresá un lenguaje de programación");
-    }
-}
+    }while(pista1 == false){
+        alert("La palabra ingresada " + pista1 + " es incorrecta. Intentá nuevamente.");
+        pista1 = prompt("Ingresá un lenguaje de programación");
+    } 
+
+}alert("La palabra ingresada " + pista1 + " es CORRECTA y sumaste " + puntos + " puntos!");
 
 
 
@@ -29,11 +33,15 @@ if(pista2 == "messi"){
 }else if (pista2 =="MESSI"){
     alert("La palabra ingresada " + pista2 + " es CORRECTA y sumaste " + puntos + " puntos!");
 }else{
-    while(pista2!= true){
+    do{
+        alert("La palabra ingresada " + pista2 + " es incorrecta. Intentá nuevamente.");
+        pista2 = prompt("Ingresá el apellido del jugador de la selección Argentina que tiene la camiseta 10");
+    }while(pista2 == false){
     alert("La palabra ingresada " + pista2 + " es incorrecta. Intentá nuevamente.");
     pista2 = prompt("Ingresá un lenguaje de programación");
-    }
-}
+    } 
+
+}alert("La palabra ingresada " + pista2 + " es CORRECTA y sumaste " + puntos + " puntos!");
 
 
 let pista3 = prompt("Ingresá el de copas del mundo que ganó Argentina");
@@ -44,11 +52,14 @@ if(pista3 == "3"){
 }else if (pista3 =="TRES"){
     alert("La palabra ingresada " + pista3 + " es CORRECTA y sumaste " + puntos + " puntos!");
 }else{
-    while(pista3!= true){
+    do{
+        alert("La palabra ingresada " + pista3 + " es incorrecta. Intentá nuevamente.");
+        pista3 = prompt("Ingresá el de copas del mundo que ganó Argentina");
+    }while(pista3 == false){
     alert("La palabra ingresada " + pista3 + " es incorrecta. Intentá nuevamente.");
     pista3 = prompt("Ingresá un lenguaje de programación");
-    }
-}
+    }   
+}alert("La palabra ingresada " + pista3 + " es CORRECTA y sumaste " + puntos + " puntos!");
 
 
 
