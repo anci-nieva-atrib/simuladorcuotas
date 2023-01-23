@@ -14,9 +14,8 @@ a{
 }
 
 body{
-    background-image: url(../Multimedia/fondo.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgba(96, 67, 167, 1);
+
 }
 
 .titulo{
@@ -24,7 +23,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
-    top: 30%;
+    top: 25%;
 }
 
 .footer__texto{
@@ -33,7 +32,7 @@ body{
     font-size: 1.5rem;
     text-align: left;
     width: 100%;
-    color: rgba(96, 67, 167, 1);
+    color: white;
     letter-spacing: 0.03rem;
 }
 
@@ -45,7 +44,7 @@ body{
 
 .footer__bg--inicio{
     position: relative;
-    top: 500px;
+    top: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
