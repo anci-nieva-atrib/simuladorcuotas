@@ -24,7 +24,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
-    top: 320px;
+    top: 30%;
 }
 
 .footer__texto{
@@ -45,7 +45,7 @@ body{
 
 .footer__bg--inicio{
     position: relative;
-    top: 600px;
+    top: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
