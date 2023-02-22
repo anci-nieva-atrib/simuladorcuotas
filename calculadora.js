@@ -195,3 +195,17 @@ else{
 
     console.log("Si llevás el smartphone en 1 cuota, tenés 25% de descuento");
 }
+
+
+
+
+
+// Tienen que almacenar datos en el storage y recuperar esos datos
+// setItem y getItem
+// Ojo datos relacionados con el proyecto
+// Si tienen un carrito de compras deben tener los objetos en un json
+//nada de alert y prompt
+//almacenar en storage e imprimir los datos en pantalla, los datos guardados por storage
+
+
+find

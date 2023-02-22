@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="Multimedia/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/style4.css">
+
+    <title>Smartphone Store</title>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <img src="./Multimedia/logo.svg" alt="logo Smartphone Store">
+        </section>
+        <section id="carrito">
+            <img src="./Multimedia/carrito.svg" alt="icono carrito" class="iconoCarrito">
+            <p id="cantidadItemsCarrito">0</p>
+        </section>
+    </header>
+    <div class="lineaDivisora"></div>
+
+    <main>
+        <h1>Hola! Aquí podrás consultar la financiación en cuotas de tu smartphone deseado.</h1>
+
+            <div id="seleccionarMarca">
+
+                <p id="paso1" class="pasos"><strong> 1. </strong>Estas son las marcas disponibles. Seleccioná una opción.</p>
+                    <section>
+                        <div id="contenedorBotonesMarcas">
+                            <button id="botonMarcaApple" class="botonMarca">Apple</button>
+                            <button id="botonMarcaSamsung" class="botonMarca">Samsung</button>
+                            <button id="botonMarcaLasDos" class="botonMarca">Las dos marcas</button>
+                        </div>
+                    </section>
+            </div>
+
+
+            <p id="paso2" class="oculto"><strong> 2. </strong> Seleccioná el modelo sobre el que queres consultar (podes elegir mas de una opción).</p>
+
+
+            <div id="seleccionarModelo"></div>
+
+
+            <div id="seleccionarTarjeta" class="oculto">
+
+                <p id="paso3"><strong> 3. </strong>Estas son las tarjetas disponibles. Seleccioná una opción.</p>
+
+                    <section>
+                        <div id="contenedorBotonesTarjetas">
+
+                            <button id="botonVisa" class="botonTarjeta"><img src="./Multimedia/visa.svg" alt="logo-visa" class="imgTarjeta"></button>
+
+                            <button id="botonMastercard" class="botonTarjeta"><img src="./Multimedia/mastercard.svg" alt="logo-mastercard" class="imgTarjeta"></button>
+                        </div>
+                    </section>
+            </div>
+
+
+            <p id="paso4" class="oculto"><strong> 4. </strong>Estas son las cuotas disponibles. Por favor, seleccioná una opción.</p>
+
+
+            <div id="seleccionarCuotas"></div>
+
+            
+            <div id="resultadoFinanciacion"></div>
+    </main>
+
+
+    <script src="calculadora4.js"></script>
+</body>
+</html>
