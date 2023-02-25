@@ -69,11 +69,11 @@ mostrarProductosTodos.addEventListener("click", () => {
 const galeriaDeProductos = document.querySelector("#seleccionarModelo");
 const arrayDeProductosAgregados = JSON.parse(localStorage.getItem("productosAgregados")) || [];
 const itemsAgregados = document.querySelector("#cantidadItemsAgregados");
-actualizarCantidadCarrito ()
+actualizarCantidadItemsAgregados ()
 
 
 
-//En este condicional indicamos que si hay productos en el carrito, cuando el usuario vuelva a ingresar pueda ver los botones de tarjetas para no tener que seleccionar el telefono de nuevo, ya que lo tiene guardado en carrito.
+//En este condicional indicamos que si hay productos agregados, cuando el usuario vuelva a ingresar pueda ver los botones de tarjetas para no tener que seleccionar el telefono de nuevo, ya que lo tiene guardado en carrito.
 if(arrayDeProductosAgregados.length > 0){
     mostrarContenido("#seleccionarTarjeta");
 }
@@ -118,7 +118,7 @@ function crearProductos(smartphone){
                 if(cuotaSeleccionada !== null){
                     actualizarResultadosFinanciacion()
                 }
-                actualizarCantidadCarrito()
+                actualizarCantidadItemsAgregados()
                 
                 localStorage.setItem("productosAgregados", JSON.stringify(arrayDeProductosAgregados));
 
@@ -127,7 +127,6 @@ function crearProductos(smartphone){
     });
 
 };
-
 
 
 //Funciones mostrar contenido del HTML
@@ -269,8 +268,8 @@ function actualizarResultadosFinanciacion (){
 
 
 
-//En esta funcion actualizamos el numero de items agregados en el icono carrito
-function actualizarCantidadCarrito (){
+//En esta funcion actualizamos el numero de items agregados en el indicador de cantidad
+function actualizarCantidadItemsAgregados (){
     let cantidad = 0;
                 
     for(let i = 0; i < arrayDeProductosAgregados.length; i++){
@@ -294,7 +293,7 @@ function eliminarItems (id){
         arrayDeProductosAgregados.splice(indice, 1);
     }
 
-    actualizarCantidadCarrito()
+    actualizarCantidadItemsAgregados()
     actualizarResultadosFinanciacion()
     localStorage.setItem("productosAgregados", JSON.stringify(arrayDeProductosAgregados));
 }
