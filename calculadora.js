@@ -68,7 +68,7 @@ mostrarProductosTodos.addEventListener("click", () => {
 //Aqui esta la funcion para crear cada card de producto
 const galeriaDeProductos = document.querySelector("#seleccionarModelo");
 const arrayDeProductosAgregados = JSON.parse(localStorage.getItem("productosAgregados")) || [];
-const itemsEnIconoCarrito = document.querySelector("#cantidadItemsCarrito");
+const itemsAgregados = document.querySelector("#cantidadItemsAgregados");
 actualizarCantidadCarrito ()
 
 
@@ -106,7 +106,6 @@ function crearProductos(smartphone){
 
             galeriaDeProductos.appendChild(cadaProducto);
 
-            
             botonAgregar.addEventListener("click", () => {
                 if(arrayDeProductosAgregados.some((producto) => producto.id === smartphone.id)){
                     let indice = arrayDeProductosAgregados.findIndex((producto) => producto.id === smartphone.id);
@@ -119,7 +118,6 @@ function crearProductos(smartphone){
                 if(cuotaSeleccionada !== null){
                     actualizarResultadosFinanciacion()
                 }
-
                 actualizarCantidadCarrito()
                 
                 localStorage.setItem("productosAgregados", JSON.stringify(arrayDeProductosAgregados));
@@ -132,11 +130,10 @@ function crearProductos(smartphone){
 
 
 
-//Funciones mostrar y ocultar contenido del HTML
+//Funciones mostrar contenido del HTML
 function mostrarContenido(id){
     document.querySelector(id).className="";
 }
-
 
 mostrarApplePorDefecto()
 
@@ -216,7 +213,7 @@ function crearBotonesCuotas(cuotas){
         botonCuota.addEventListener("click", () => {
             cuotaSeleccionada = botonCuota.id;
             tarjetaSeleccionada = cuotas.tipo;
-            actualizarResultadosFinanciacion ()
+            actualizarResultadosFinanciacion();
         });
     });
 
@@ -226,10 +223,7 @@ function crearBotonesCuotas(cuotas){
 
 //En esta funcion creamos el detalle de los resultados de financiacion
 function actualizarResultadosFinanciacion (){
-    
     contenedorResultadoFinanciacion.innerHTML = "";
-    
-    mostrarTituloResultadoFinanciacion()
 
     for (const smartphone of arrayDeProductosAgregados) {
 
@@ -264,12 +258,11 @@ function actualizarResultadosFinanciacion (){
             detalleFinanciacion.innerHTML = `
 
                 <div id="resultadoFinanciacion">
-                    <p class="cuotasParaFinanciar"> ${cuotaSeleccionada} cuotas sin interés de $${resultadoFinanciacion}</p>
+                    <p class="cuotasParaFinanciar"> ${cuotaSeleccionada} cuotas sin interés de $${resultadoFinanciacion} con ${tarjetaSeleccionada}</p>
                     <div class="lineaDivisora"></div>
                 </div>`;
 
             contenedorDatosSmartphone.appendChild(detalleFinanciacion);
-
     }
 
 }
@@ -282,9 +275,8 @@ function actualizarCantidadCarrito (){
                 
     for(let i = 0; i < arrayDeProductosAgregados.length; i++){
         cantidad += arrayDeProductosAgregados[i].cantidad;
-        
     }
-    itemsEnIconoCarrito.innerHTML = cantidad;
+    itemsAgregados.innerHTML = cantidad;
 }
 
 
@@ -301,9 +293,9 @@ function eliminarItems (id){
     }else{
         arrayDeProductosAgregados.splice(indice, 1);
     }
-    actualizarCantidadCarrito()
-    actualizarResultadosFinanciacion ()
 
+    actualizarCantidadCarrito()
+    actualizarResultadosFinanciacion()
     localStorage.setItem("productosAgregados", JSON.stringify(arrayDeProductosAgregados));
 }
 
@@ -317,19 +309,3 @@ function mostrarApplePorDefecto(){
     mostrarProductosApple = crearProductos(productosApple);
     mostrarContenido("#paso2");
 };
-
-
-
-//En esta funcion mostramos el titulo del bloque de resultados despues de que el usuario hace click en las cuotas
-function mostrarTituloResultadoFinanciacion(){
-    
-    const tituloResultado = document.createElement("div");
-    tituloResultado.innerHTML =`
-
-    <div id="contenedorTituloResultado">
-        <img src="./Multimedia/tarjeta.svg" alt="icono-tarjeta" class="iconoTarjeta">
-        <h2 id="titulo">Te mostramos la financiación con ${tarjetaSeleccionada}</h2>
-    <div>
-    `;
-    contenedorResultadoFinanciacion.appendChild(tituloResultado);
-}
