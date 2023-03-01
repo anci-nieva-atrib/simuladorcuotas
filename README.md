@@ -1,5 +1,5 @@
 # JavaScript
-###### Tercera pre entrega
+###### Simulador que permite calcular cuotas sin interés.
 
 ## Sobre el simulador
 - El simulador permite calcular la financiación en cuotas de uno o más smartphones de manera individual.
